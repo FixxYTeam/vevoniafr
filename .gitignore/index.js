@@ -3,6 +3,8 @@ const client = new Discord.Client();
 client.commands = new Discord.Collection();
 const fs = require('fs');
 
+var prefix = "v!"
+
 "use strict";
 
 var banni = [
@@ -41,7 +43,7 @@ fs.readdir('./Events/', (error, f) => {
         });
 });
 
-client.login('NTUxMzY0OTg5MjEwODUzMzc2.XKzgfg.1YT3BiqyvCnp619GumuQBaIPDrc');
+client.login('NTUxMzY0OTg5MjEwODUzMzc2.XLoAng.5jDG7BPo2Zgfz8MjnzUiNyKX7ro');
 
 client.on("message", (msg) => {
     if (banni.some(x => msg.content.toLowerCase().split(/\s+/).includes(x))) {
